@@ -1,7 +1,12 @@
 \documentclass[12pt,a4paper,notitlepage,oneside]{article}
+\usepackage[english]{babel}
+\usepackage[backend=biber]{biblatex}
+\usepackage{csquotes}
 \usepackage[margin=1in]{geometry}
 \usepackage[pdftex]{graphicx}
 \usepackage{hyperref,setspace}
+
+\addbibresource{ref.bib}
 
 \newcommand{\myBranchName}{Computer Science \& Engineering}
 \newcommand{\myCollegeName}{National Institute of Technology Calicut}
@@ -41,6 +46,11 @@
 \input{./system-principles.tex}
 \input{./design.tex}
 \input{./conclusion.tex}
-\input{./ref.tex}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\nocite{*}
+\printbibliography
 
 \end{document}
