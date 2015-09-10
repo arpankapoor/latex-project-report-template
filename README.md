@@ -4,6 +4,14 @@
 
 Start editing with `report.tex` and follow to the files included.
 
+## Bibliography
+
+Put all your references into `ref.bib` according to the [bibtex format](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management).
+
+## Output
+
+    make
+
 ## Credits
 
 - NITC logo: Mr. Chandramohan M K, Graphic Studio, Central Library, NIT Calicut
