@@ -1,23 +1,27 @@
-\documentclass[12pt,a4paper,notitlepage,oneside]{article}
+\documentclass[12pt,a4paper]{article}
+\usepackage{algorithm,algpseudocode}
+\usepackage{amsmath,amssymb}
 \usepackage[english]{babel}
 \usepackage[backend=biber]{biblatex}
+\usepackage[utf8]{inputenc}		% This has to come before csquotes
 \usepackage{csquotes}
-\usepackage{geometry}
-\usepackage[pdftex]{graphicx}
-\usepackage{hyperref,setspace}
+\usepackage[T1]{fontenc}		% Use 8-bit CM-like font set
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{setspace}
 
-\addbibresource{ref.bib}
+\addbibresource{./ref.bib}
 
-\newcommand{\myBranchName}{Computer Science \& Engineering}
-\newcommand{\myCollegeName}{National Institute of Technology Calicut}
-\newcommand{\myDeptName}{Department of Computer Science \& Engineering}
-\newcommand{\myName}{NAME}
-\newcommand{\myRollNo}{ROLL NUMBER}
+\newcommand{\myBranchName}{Computer Science and Engineering}
+\newcommand{\myCollegeName}{National Institute of Technology, Calicut}
+\newcommand{\myDeptName}{Department of Computer Science and Engineering}
+\newcommand{\myName}{Your Full Name}
+\newcommand{\myRollNo}{Your Roll Number}
 \newcommand{\mySeminarCoordinator}{ABC XYZ}
-\newcommand{\myTopic}{TYPE YOUR SEMINAR TOPIC NAME}
+\newcommand{\myTopic}{Write your seminar title here}
 
 \hypersetup{
-	hidelinks,
 	pdftitle={\myTopic{}},
 	pdfauthor={\myName{}},
 	pdfsubject={Seminar Report},
@@ -26,27 +30,18 @@
 
 \begin{document}
 
-\input{./title.tex}
-
-\pagenumbering{roman}	% Numbering before main content starts
-
-\input{./certificate.tex}
-\input{./acknow.tex}
+\include{title}
+\include{certificate}
+\include{acknow}
+\include{abstract}
 
 \tableofcontents
-\clearpage
-\listoffigures
-
-\input{./abstract.tex}
-
-\pagenumbering{arabic}	% Reset numbering to normal for the main content
 
 % INTRODUCTION
 \clearpage
 \section{Introduction}
 
 YOUR INTRODUCTION HERE.
-\clearpage
 
 
 % LITERATURE SURVEY
@@ -54,7 +49,6 @@ YOUR INTRODUCTION HERE.
 \section{Literature Survey}
 
 YOUR LITERATURE SURVEY HERE.
-\clearpage
 
 
 % SYSTEM PRINCIPLES
@@ -62,7 +56,6 @@ YOUR LITERATURE SURVEY HERE.
 \section{System Principles}
 
 YOUR SYSTEM PRINCIPLES HERE.
-\clearpage
 
 
 % DESIGN
@@ -70,7 +63,6 @@ YOUR SYSTEM PRINCIPLES HERE.
 \section{Design}
 
 YOUR DESIGN HERE.
-\clearpage
 
 
 % CONCLUSION
@@ -78,10 +70,9 @@ YOUR DESIGN HERE.
 \section{Conclusion}
 
 YOUR CONCLUSION HERE.
-\clearpage
 
-\phantomsection
-\addcontentsline{toc}{section}{References}
+% References
+\clearpage
 \nocite{*}
 \printbibliography
 
