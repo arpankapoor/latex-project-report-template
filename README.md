@@ -1,4 +1,4 @@
-# LaTeX Template for Seminar Report
+# LaTeX Template for Seminar Report @ NITC
 
 ## How to Start
 
@@ -6,7 +6,9 @@ Start editing with `report.tex` and follow to the files included.
 
 ## Bibliography
 
-Put all your references into `ref.bib` according to the [bibtex format](https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management).
+Put all your references into `ref.bib`.
+Install [biber](http://biblatex-biber.sourceforge.net/) for [processing the
+same](http://tex.stackexchange.com/a/25702).
 
 ## Output
 
